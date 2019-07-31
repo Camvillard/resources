@@ -1,8 +1,11 @@
-/* ------ INDEX FOR LAYOUTS ------ */
+/* ------ COMPONENTS : FOOTER ------ */
 
-@import "general";
-@import "typography";
-@import "cat-layout";
+footer {
+  .footer-credits {
+    font-size: 1rem;
+    color: red;
+  }
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

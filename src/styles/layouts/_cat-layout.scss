@@ -1,8 +1,20 @@
-/* ------ INDEX FOR LAYOUTS ------ */
+/* ------ LAYOUTS : CATEGORY ------ */
 
-@import "general";
-@import "typography";
-@import "cat-layout";
+
+.category-container {
+  width: 100vw;
+  height: 100vh;
+
+  &.even {
+    border: 3px solid red;
+  }
+
+  &.odd {
+    border: 3px solid green;
+  }
+}
+
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px

@@ -1,8 +1,10 @@
-/* ------ INDEX FOR LAYOUTS ------ */
+/* ------ COMPONENTS : CONTAINERS ------ */
 
-@import "general";
-@import "typography";
-@import "cat-layout";
+.main-container {
+  width: 92vw;
+  margin: auto;
+  max-width: 1280px;
+}
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
@@ -11,6 +13,9 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .main-container {
+    width: 82vw;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
