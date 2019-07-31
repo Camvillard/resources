@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 
 // internal components
 import CategoryLayout from "../components/category-layout"
+import ResourceCard from "../components/resource-card"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -19,22 +20,39 @@ class IndexPage extends React.Component {
     const data = this.props.data.allAirtable.edges
     let counter = 0
 
+    const typography = data.filter( d => d.node.table === "typography")
+    const colors = data.filter( d => d.node.table === "colors")
+    const misc = data.filter( d => d.node.table === "misc")
+
+    console.log(colors)
     return(
       <React.Fragment>
       <SEO title="Home" />
 
-      { data.map( d => {
-        counter = counter + 1
-        return <CategoryLayout data={d.node} key={d.node.id} counter={counter}/>
-        }
-      )}
+      <div className="category-container aqua">
 
-      <footer>
-        <p className="footer-credits">
-          © {new Date().getFullYear()}, made with love by
-          <a href="https://www.cdltbisou.com">camille | cdltbisou</a>
-        </p>
-      </footer>
+
+        <div className="category-title">
+          <h2><span>1</span>fonts & <br/> typography</h2>
+        </div>
+
+
+        <div className="resource-container">
+          { typography && (
+            typography.map( data => <ResourceCard
+              resource={data}
+              key={data.node.id}
+              color="aqua"/>
+            )
+          )}
+      </div>
+
+
+
+      </div>
+
+
+
 
 
       </React.Fragment>
@@ -55,6 +73,7 @@ export const query = graphql`
       edges {
         node {
           id
+          table
           recordId
           data {
             title
@@ -67,3 +86,5 @@ export const query = graphql`
     }
   }
 `
+
+

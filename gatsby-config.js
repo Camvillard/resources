@@ -37,12 +37,15 @@ module.exports = {
         tables: [
           {
             baseId: process.env.AIRTABLE_BASE,
-            tableName: `frontend`
-            //tableView: `YOUR_TABLE_VIEW_NAME`, // optional
-            //queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
-            //mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"
-            // optional, for deep linking to records across tables.
-            // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`]
+            tableName: `typography`
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE,
+            tableName: `colors`
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE,
+            tableName: `misc`
           }
         ]
       }

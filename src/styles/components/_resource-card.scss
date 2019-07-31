@@ -1,12 +1,23 @@
-/* ------ COMPONENTS : CONTAINERS ------ */
+/* ------ COMPONENTS : RESOURCE CARDS ------ */
 
-.main-container {
-  width: 92vw;
-  margin: auto;
-  max-width: 1280px;
+.resource-card {
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+  }
+
+  &.aqua {
+    a{
+      border-bottom: 3px solid $aqua;
+    }
+  }
+
+  &.peach {
+    a{
+      border-bottom: 3px solid $peach;
+    }
+  }
 }
-
-
 
 
 
@@ -17,9 +28,6 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
-  .main-container {
-    width: 82vw;
-  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
